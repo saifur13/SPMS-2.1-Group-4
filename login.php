@@ -17,6 +17,7 @@
     echo "<script type='text/javascript'>alert('Email or Password is Incorrect')</script>";
   }
 ?>
+//login page
 
 <!DOCTYPE html>
 <html lang="en">

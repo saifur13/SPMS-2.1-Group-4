@@ -16,7 +16,7 @@
         $_SESSION['user_id'] = $res['id'];
         $_SESSION['name'] = $res['firstName'] . " " . $res['lastName'];
         $_SESSION['role'] = $role;
-        header("Location: ../login.php?response=200");
+        header("Location: ../signin.php?response=200");
     }
 
 ?>

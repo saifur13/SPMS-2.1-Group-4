@@ -28,7 +28,8 @@
             $query = "SELECT * FROM exam WHERE serial = ".$e['examId'];
             $max = $conn->query($query)->fetch_assoc();
 
-            while($e['mark'.$i.'Co']){
+                //while($e['mark'.$i.'Co'] && $i<9){
+            while($i<9){
                 $co = $e['mark'.$i.'Co'];
                 if(isset($coMark [$co])){
                     $coMark [$co] = $coMark [$co] + $e['mark'.$i];
@@ -88,7 +89,7 @@
                     $courseFinal[$id][$i] = -1;
                     continue;
                 }
-                $mark = 0; $max = 0;
+                $mark = 1; $max = 1;
                 for($j=1; $j<=10; $j++){
                     if($coList['co'.$j]==1){
                         $mark += $course[$id][$j];

@@ -82,6 +82,6 @@
             continue;
         }
     }
-    header("Location: ../faculty-marks-entry.php?response=200");
+    header("Location: ../include/faculty-marks-entry.php?response=200");
     
 ?>

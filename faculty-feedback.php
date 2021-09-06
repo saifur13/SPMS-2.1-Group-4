@@ -2,9 +2,9 @@
 <?php
   session_start();
   if(!isset($_SESSION['role']) || $_SESSION['role'] != 'faculty'){
-    header("Location: login.php");
+    header("Location: ../login.php");
   }
-  include 'php/include/conn.php';
+  include '../php/include/conn.php';
   $query = "SELECT * from exam";
   $exams = $conn->query($query);
 ?>
@@ -24,8 +24,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- CSS Files -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
 
   <style>
     .final-result{
@@ -61,6 +61,14 @@
               <p>Marks Entry</p>
             </a>
           </li>
+
+          <li>
+            <a href="view-student-result.php">
+              <i class="now-ui-icons design_app"></i>
+              <p>Student Result</p>
+            </a>
+          </li>
+
           <li class="active ">
             <a href="#">
               <i class="now-ui-icons education_atom"></i>
@@ -101,7 +109,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">Faculty</a>
-                  <a class="dropdown-item" href="php/logout.php">LogOut</a>
+                  <a class="dropdown-item" href="../php/logout.php">LogOut</a>
                 </div>
               </li>
             </ul>
@@ -176,18 +184,21 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="assets/js/core/jquery.min.js"></script>
-  <script src="assets/js/core/popper.min.js"></script>
-  <script src="assets/js/core/bootstrap.min.js"></script>
-  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+  <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+
   <!-- Chart JS -->
-  <script src="assets/js/plugins/chartjs.min.js"></script>
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
+ 
+  <script src="../assets/js/core/jquery.min.js"></script>
  
   <script>
     $(document).ready(function() {

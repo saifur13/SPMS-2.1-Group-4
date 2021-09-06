@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(!isset($_SESSION['role']) || $_SESSION['role'] != 'faculty'){
-    header("Location: login.php");
+    header("Location: ../login.php");
   }
 ?>
 
@@ -21,8 +21,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- CSS Files -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
 
   <style>
     .final-result{
@@ -58,6 +58,9 @@
       background-color: #E3E3E3;
       border-radius: 5px;
     }
+    /* .card-body{
+      background-color: darkslategray;
+    } */
   </style>
 
 </head>
@@ -83,9 +86,9 @@
           </li>
 
           <li>
-            <a href="view-student-result.php">
+            <a href="student-plo-marksheet.php">
               <i class="now-ui-icons design_app"></i>
-              <p>View Student Result</p>
+              <p>Student Result</p>
             </a>
           </li>
 
@@ -129,7 +132,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">Faculty</a>
-                  <a class="dropdown-item" href="php/logout.php">LogOut</a>
+                  <a class="dropdown-item" href="../php/logout.php">LogOut</a>
                 </div>
               </li>
             </ul>
@@ -149,7 +152,7 @@
                 
               </div>
               <div class="card-body">
-                <form action="php/add-marks.php" method="POST" id="marks-form" enctype='multipart/form-data'>
+                <form action="../php/add-marks.php" method="POST" id="marks-form" enctype='multipart/form-data'>
                   <div class="row">
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
@@ -376,14 +379,14 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="assets/js/core/jquery.min.js"></script>
-  <script src="assets/js/core/popper.min.js"></script>
-  <script src="assets/js/core/bootstrap.min.js"></script>
-  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
  
   <script>
     $(".submit-button").click(function(){

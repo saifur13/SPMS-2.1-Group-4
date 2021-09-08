@@ -3,8 +3,10 @@
     require '../php/include/check-conn.php';
     include '../php/include/plo.php';
 
-    if(isset($_GET['id'])){     
-        $id = $_GET['id'];
+    //if(isset($_GET['id'])){
+        //$id = $_SESSION['user_id'];
+        $id = 1416455;
+        //$id = $_GET['id'];
         $sql = "SELECT * FROM marks WHERE student_id = $id";
         $sMarks = $mysql->query($sql);
 
@@ -73,5 +75,5 @@
         $ploNum = $mysql->query($sql)->num_rows;
 
         $color = ["", "#1FE7C4", "#E45C17", "#06B97B", "#8CE026", "#E1CCFF", "#5BA2CC", "#0A2E82", "#957107", "#80CF18"];
-    }  
+    
 ?>
